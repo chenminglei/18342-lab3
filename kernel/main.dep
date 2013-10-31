@@ -1,32 +1,32 @@
-/home/chenzhuokb2/Desktop/lab3/kernel/main.o:  \
- /home/chenzhuokb2/Desktop/lab3/kernel/main.c \
-  /home/chenzhuokb2/Desktop/lab3/kernel/main.h \
-  /home/chenzhuokb2/Desktop/lab3/uboot/include/exports.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/types.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/stdarg.h \
-  /home/chenzhuokb2/Desktop/lab3/uboot/include/_exports.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/arm/psr.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/inline.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/arm/exception.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/arm/interrupt.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/arm/timer.h
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/main.o:  \
+ /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/main.c \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/main.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/uboot/include/exports.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/types.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/stdarg.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/uboot/include/_exports.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/psr.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/inline.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/exception.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/interrupt.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/timer.h
 
-/home/chenzhuokb2/Desktop/lab3/kernel/main.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/main.h:
 
-/home/chenzhuokb2/Desktop/lab3/uboot/include/exports.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/uboot/include/exports.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/types.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/types.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/stdarg.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/stdarg.h:
 
-/home/chenzhuokb2/Desktop/lab3/uboot/include/_exports.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/uboot/include/_exports.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/arm/psr.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/psr.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/inline.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/inline.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/arm/exception.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/exception.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/arm/interrupt.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/interrupt.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/arm/timer.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/timer.h:

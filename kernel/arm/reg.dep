@@ -1,11 +1,11 @@
-/home/chenzhuokb2/Desktop/lab3/kernel/arm/reg.o:  \
- /home/chenzhuokb2/Desktop/lab3/kernel/arm/reg.c \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/types.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/arm/reg.h \
-  /home/chenzhuokb2/Desktop/lab3/kernel/include/inline.h
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/arm/reg.o:  \
+ /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/arm/reg.c \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/types.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/reg.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/inline.h
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/types.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/types.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/arm/reg.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/reg.h:
 
-/home/chenzhuokb2/Desktop/lab3/kernel/include/inline.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/inline.h:
