@@ -1,0 +1,5 @@
+/home/chenzhuokb2/Desktop/lab3/kernel/start.o:  \
+ /home/chenzhuokb2/Desktop/lab3/kernel/start.S \
+  /home/chenzhuokb2/Desktop/lab3/kernel/include/asm.h
+
+/home/chenzhuokb2/Desktop/lab3/kernel/include/asm.h:

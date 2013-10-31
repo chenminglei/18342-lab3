@@ -1,0 +1,5 @@
+/home/chenzhuokb2/Desktop/lab3/tasks/exit/exit.o:  \
+ /home/chenzhuokb2/Desktop/lab3/tasks/exit/exit.S \
+  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/swi.h
+
+/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/swi.h:
