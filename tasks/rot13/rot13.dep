@@ -1,17 +1,17 @@
-/home/chenzhuokb2/Desktop/lab3/tasks/rot13/rot13.o:  \
- /home/chenzhuokb2/Desktop/lab3/tasks/rot13/rot13.c \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/unistd.h \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/fileno.h \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/sys/types.h \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/types.h \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/stdlib.h
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/rot13/rot13.o:  \
+ /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/rot13/rot13.c \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/unistd.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/fileno.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/sys/types.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/types.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/stdlib.h
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/unistd.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/unistd.h:
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/fileno.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/fileno.h:
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/sys/types.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/sys/types.h:
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/types.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/types.h:
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/stdlib.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/stdlib.h:

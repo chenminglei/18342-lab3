@@ -1,14 +1,14 @@
-/home/chenzhuokb2/Desktop/lab3/tasks/hello/hello.o:  \
- /home/chenzhuokb2/Desktop/lab3/tasks/hello/hello.c \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/unistd.h \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/fileno.h \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/sys/types.h \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/types.h
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/hello/hello.o:  \
+ /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/hello/hello.c \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/unistd.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/fileno.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/sys/types.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/types.h
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/unistd.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/unistd.h:
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/fileno.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/fileno.h:
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/sys/types.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/sys/types.h:
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/types.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/types.h:

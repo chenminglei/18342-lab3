@@ -1,8 +1,8 @@
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/swi/sleep.o:  \
- /home/chenzhuokb2/Desktop/lab3/tasks/libc/swi/sleep.S \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/asm.h \
-  /home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/swi.h
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/swi/sleep.o:  \
+ /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/swi/sleep.S \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/asm.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/swi.h
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/asm.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/asm.h:
 
-/home/chenzhuokb2/Desktop/lab3/tasks/libc/include/bits/swi.h:
+/home/chinalidi/Desktop/lab3code/18342-lab3/tasks/libc/include/bits/swi.h:
