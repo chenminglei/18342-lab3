@@ -22,7 +22,7 @@ FUNC(_start)
 	 * requirements on the layout of kernel.c.  Bit first, provide main with the
 	 * jump table address as one of its arguments.
 	 */
-
+        
         sub sp, sp, #8          @leave space for spsr and cpsr                  
         stmfd sp!, {r1-r12, lr} @store r1 to r12 and lr                         
         mrs r2, spsr            @get the value of spsr                          
@@ -34,6 +34,7 @@ FUNC(_start)
         ldr r1, =spaddr         @get the address of var spaddr
         str sp, [r1]            @store sp to this variable    
         ldr r1, [sp]            @changed                                 
-                                                              
+       
+        mov r2, r8                                                       
         b       kmain            
 

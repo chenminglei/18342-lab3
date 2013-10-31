@@ -11,6 +11,11 @@
         .extern jump_swi                                    
         .extern swi_instr1                                           
         .extern swi_instr2                                   
+
+        .extern jump_irq                                    
+        .extern irq_instr1                                           
+        .extern irq_instr2                                   
+
         .extern spaddr                                      
 swi_exit:                                                            
         stmfd sp!, {r1, r2}  @save r1 and r2's original value
@@ -18,9 +23,15 @@ swi_exit:
         ldr  r1, =jump_swi   @get the address of jump swi instruction
         ldr  r2, =swi_instr1 @get the swi instruction       
         str  r2, [r1]        @restore this instruction 
-                                                            
         ldr  r2, =swi_instr2 @get the second swi instruction
         str  r2, [r1, #4]    @restore it                                                                      
+
+        ldr  r1, =jump_irq   @get the address of jump swi instruction
+        ldr  r2, =irq_instr1 @get the swi instruction       
+        str  r2, [r1]        @restore this instruction 
+        ldr  r2, =irq_instr2 @get the second swi instruction
+        str  r2, [r1, #4]    @restore it                                                                      
+
         ldmfd sp!, {r1, r2}  @restore the value in r1 and r2         
                                                              
         ldr  sp, =spaddr     @get the sp address                     

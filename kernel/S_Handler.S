@@ -8,8 +8,10 @@
         .file   "S_Handler.S"
         .text            
         .global S_Handler                                         
+        .extern global_data
         .extern C_SWI_HANDLER                                     
-                                                                  
+           
+                                                       
 S_Handler:                                                                     
         SUB    sp, sp, #4                                                      
         STMFD  sp!, {r0-r12, lr}      @ store registers into stack             
@@ -18,7 +20,13 @@ S_Handler:
         MOV    r1, sp                 @ make current sp as the second parameter
         LDR    r0, [lr, #-4]          @ get the swi code number
         BIC    r0, r0, #0xff000000                                 
+
+        LDR    r8, =global_data
+        LDR    r8, [r8]
+
         BL     C_SWI_HANDLER          @ jump to C swi handler      
+
+
         LDR    r2, [sp, #14*4]                                     
         MSR    spsr, r2               @ restore spsr           
         ADD    sp, sp, #4                                      

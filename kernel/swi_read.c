@@ -3,7 +3,7 @@
  *        Zhe Shen<zshen@andrew.cmu.edu>                                        
  */ 
 
-#include "kernel.h"
+#include "main.h"
 #include <bits/errno.h>
 #include <exports.h>
 

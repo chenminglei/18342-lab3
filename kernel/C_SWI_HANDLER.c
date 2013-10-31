@@ -3,7 +3,7 @@
  *          Zhe Shen<zshen@andrew.cmu.edu>
  */
 
-#include "kernel.h"
+#include "main.h"
 #include <exports.h>
 
 #define READ 0x900003

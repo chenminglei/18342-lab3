@@ -3,9 +3,9 @@
  *            Minglei Chen<mingleic@andrew.cmu.edu>
  */
 
-#include "kernel.h"
-#include<bits/errno.h>
-#include<exports.h>
+#include "main.h"
+#include <bits/errno.h>
+#include <exports.h>
 
 
 unsigned swi_write(unsigned* regs) {

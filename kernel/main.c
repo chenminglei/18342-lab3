@@ -8,6 +8,7 @@
  */
 
 #include "main.h"
+#include "constant.h"
 #include <exports.h>
 #include <arm/psr.h>                             
 #include <arm/exception.h>                       
@@ -15,40 +16,66 @@
 #include <arm/timer.h>                           
                                                  
 uint32_t global_data;
-
-#define VEC_SWI   0x08
-#define LDR_INSTR 0xe51ff004
-
 /* Global variables */
-unsigned int * jump_swi; // address of the s handler
+unsigned int *jump_swi; // address of the s handler
 unsigned int swi_instr1; // original content of the first instruction in swi handler
 unsigned int swi_instr2; // original content of the second instruction in swi handler
+
+unsigned int *jump_irq; // address of the s handler
+unsigned int irq_instr1; // original content of the first instruction in swi handler
+unsigned int irq_instr2; // original content of the second instruction in swi handler
+
 unsigned int spaddr;     // original sp address
+unsigned int cur_time = 0;
+
 
 int kmain(int argc, char** argv, uint32_t table) {
-        /* Get the instruction in the swi entry of vector table */
-        unsigned int vec_swi_instr = *((unsigned int *)VEC_SWI);
-       
-        /* Check the ldr instruction */
-        if ((vec_swi_instr & 0xfffff000) != 0xe59ff000) {
-            printf("info : instruction in vector table incorrect!\n");
-            swi_exit(vec_swi_instr);
-        }      
- 
-        /* Get the address of the original swi handler */
-        jump_swi = (unsigned int *)((0x00000fff & vec_swi_instr) + VEC_SWI + 0x08);
-        jump_swi = (unsigned int *)(*jump_swi); 
+        global_data = table;        
 
-        /* Get the original instructions in the handler */
-        swi_instr1 = *jump_swi;
-        swi_instr2 = *(jump_swi + 1);
-        /* Change the original instructions */
-        *jump_swi = (unsigned int)LDR_INSTR;
-        *(jump_swi + 1) = (unsigned int)S_Handler;
-       
+        installHandler(VEC_SWI, S_Handler, 0);
+        installHandler(VEC_IRQ, IRQ_Handler, 1);
+
         /* Set up user program */     
         userSetup(argc, argv); 
+
+        timeSetup();
 
 	return -255;
 }
 
+void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type) {
+
+        unsigned int vec_instr = *vec_address;
+        unsigned int * jump_handler;
+
+        /* Check the ldr instruction */
+        if ((vec_instr & 0xfffff000) != LDR_CHECK) {
+            printf("info : instruction in vector table incorrect!\n");
+            swi_exit(vec_instr);
+        }      
+
+        /* Get the address of the original swi handler */
+        jump_handler = (unsigned int *)((0x00000fff & vec_instr) + (unsigned int)vec_address + 0x08);
+        jump_handler = (unsigned int *)(*jump_handler); 
+
+        if (type == 0) {
+            jump_swi = jump_handler;
+            swi_instr1 = *jump_swi;
+            swi_instr2 = *(jump_swi + 1);
+        }
+        else {
+            jump_irq = jump_handler;
+            irq_instr1 = *jump_irq;
+            irq_instr2 = *(jump_irq + 1);
+        }
+        /* Change the original instructions */
+        *jump_handler = (unsigned int)LDR_INSTR;
+        *(jump_handler + 1) = (unsigned int)new_address;
+}
+
+void timeSetup() {
+    reg_clear(INT_ICLR_ADDR, 1 << 26);    
+    reg_write(OSTMR_OSMR_ADDR(0), OSMR_COUNT);
+    reg_write(OSTMR_OSCR, 0);
+    reg_clear(INT_ICMR_ADDR, 1 << 26);    
+}
