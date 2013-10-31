@@ -18,7 +18,7 @@ IRQ_Handler:
         MOV    r1, sp                 @ make current sp as the second parameter
         LDR    r0, [lr, #-4]          @ get the swi code number
         BIC    r0, r0, #0xff000000                                 
-        BL     C_SWI_HANDLER          @ jump to C swi handler
+        BL     C_IRQ_HANDLER          @ jump to C swi handler
         LDR    r2, [sp, #14*4]                                     
         MSR    spsr, r2               @ restore spsr
         ADD    sp, sp, #4                                      
