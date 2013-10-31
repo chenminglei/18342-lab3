@@ -11,6 +11,7 @@
 #include "constant.h"
 #include <exports.h>
 #include <arm/psr.h>                             
+#include <arm/reg.h>                             
 #include <arm/exception.h>                       
 #include <arm/interrupt.h>                       
 #include <arm/timer.h>                           
@@ -28,12 +29,14 @@ unsigned int irq_instr2; // original content of the second instruction in swi ha
 unsigned int spaddr;     // original sp address
 unsigned int cur_time = 0;
 
+void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type);
+void timeSetup();
 
 int kmain(int argc, char** argv, uint32_t table) {
         global_data = table;        
 
-        installHandler(VEC_SWI, S_Handler, 0);
-        installHandler(VEC_IRQ, IRQ_Handler, 1);
+        installHandler((unsigned int *)VEC_SWI, (unsigned int)S_Handler, 0);
+        installHandler((unsigned int *)VEC_IRQ, (unsigned int)IRQ_Handler, 1);
 
         timeSetup();
 
@@ -74,9 +77,9 @@ void installHandler(unsigned int * vec_address, unsigned int new_address, unsign
 }
 
 void timeSetup() {
-    reg_clear(INT_ICLR_ADDR, 1 << 26);    
-    reg_clear(INT_ICMR_ADDR, 1 << 26);    
+    reg_clear(INT_ICLR_ADDR, 1 << INT_OSTMR_0);    
+    reg_clear(INT_ICMR_ADDR, 1 << INT_OSTMR_0);    
     reg_write(OSTMR_OSMR_ADDR(0), OSMR_COUNT);
-    reg_write(OSTMR_OSCR, 0);
-    reg_set(OSTMR_OIER, 1);
+    reg_write(OSTMR_OSCR_ADDR, 0);
+    reg_set(OSTMR_OIER_ADDR, OSTMR_OIER_E0);
 }

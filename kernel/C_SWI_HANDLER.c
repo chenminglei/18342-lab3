@@ -15,8 +15,8 @@
 
 /*Given swi_num and arguments, decide which swi handler to choose */
 
-unsigned C_SWI_HANDLER(unsigned swi_num, void* regs) {
-        unsigned result = 0;
+unsigned long C_SWI_HANDLER(unsigned swi_num, void* regs) {
+        unsigned long result = 0;
 
         /*Decide which swi to run based on swi number */
         switch(swi_num) {
@@ -34,11 +34,11 @@ unsigned C_SWI_HANDLER(unsigned swi_num, void* regs) {
                     break;    
 		case TIME_SWI:
 		    /* call swi_time */
-		    result = swi_time(regs);
+		    result = swi_time();
 		    break;
 		case SLEEP_SWI:
 		    /*call swi_sleep */
-		    result = swi_sleep(regs);     
+		    swi_sleep(regs);     
 		    break;                
                 default:                           
                     /* return with status bad code */

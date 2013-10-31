@@ -15,7 +15,13 @@ unsigned swi_read(unsigned* regs);
 unsigned swi_write(unsigned* regs);
 // swi exit
 unsigned swi_exit(unsigned staus);
+
+void swi_sleep(unsigned * regs);
+
+unsigned long swi_time();
+
 // user set up
 void userSetup(int argc, char *argv[]);
 // new swi handler
 unsigned S_Handler();
+void IRQ_Handler();
