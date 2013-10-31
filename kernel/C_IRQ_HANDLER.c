@@ -4,7 +4,7 @@
 
 extern unsigned int cur_time;
 
-unsigned IRQ_Handler(unsigned num, void* regs) {
+void IRQ_Handler() {
 	unsigned long cur_ossr = reg_read(OSTMR_OSSR_ADDR);
 	reg_write(OSTMR_OSSR_ADDR, cur_ossr & 0xffffffffe);
 	reg_write(OSTMR_OSCR_ADDR, 0x0);

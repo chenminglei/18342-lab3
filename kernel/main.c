@@ -35,10 +35,10 @@ int kmain(int argc, char** argv, uint32_t table) {
         installHandler(VEC_SWI, S_Handler, 0);
         installHandler(VEC_IRQ, IRQ_Handler, 1);
 
+        timeSetup();
+
         /* Set up user program */     
         userSetup(argc, argv); 
-
-        timeSetup();
 
 	return -255;
 }
@@ -75,7 +75,8 @@ void installHandler(unsigned int * vec_address, unsigned int new_address, unsign
 
 void timeSetup() {
     reg_clear(INT_ICLR_ADDR, 1 << 26);    
+    reg_clear(INT_ICMR_ADDR, 1 << 26);    
     reg_write(OSTMR_OSMR_ADDR(0), OSMR_COUNT);
     reg_write(OSTMR_OSCR, 0);
-    reg_clear(INT_ICMR_ADDR, 1 << 26);    
+    reg_set(OSTMR_OIER, 1);
 }
