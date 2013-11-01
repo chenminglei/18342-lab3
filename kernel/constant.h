@@ -4,4 +4,4 @@
 #define LDR_CHECK 0xe59ff000
 
 #define OSMR_COUNT  32500
-#define TIME_RESOLUTON 10
+#define TIME_RESOLUTION 10

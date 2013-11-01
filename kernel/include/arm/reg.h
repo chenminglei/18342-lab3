@@ -12,7 +12,7 @@
 #define _REG_H_
 
 #include <inline.h>
-
+#include <types.h>
 #define PERIPHERAL_BASE       0x40000000
 
 INLINE uint32_t reg_read(size_t addr)

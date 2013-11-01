@@ -8,7 +8,7 @@
         .file   "IRQ_Handler.S"
         .text
         .global IRQ_Handler
-        .extern C_SWI_HANDLER
+        .extern C_IRQ_HANDLER
 
 IRQ_Handler:
         
