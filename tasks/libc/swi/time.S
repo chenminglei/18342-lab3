@@ -15,6 +15,6 @@
 FUNC(time)
 	@ Add code here.  Put your name at the top.
 
-        swi TIME_SWI @call read interrupt                           
+        swi TIME_SWI   @call read interrupt                           
         mov pc, lr     @restore pc         
 

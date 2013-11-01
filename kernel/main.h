@@ -22,6 +22,9 @@ unsigned long swi_time();
 
 // user set up
 void userSetup(int argc, char *argv[]);
+
+void timeSetup();
+
 // new swi handler
 unsigned S_Handler();
 void IRQ_Handler();

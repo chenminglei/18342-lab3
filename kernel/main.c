@@ -30,7 +30,7 @@ unsigned int spaddr;     // original sp address
 unsigned int cur_time = 0;
 
 void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type);
-void timeSetup();
+//void timeSetup();
 
 int kmain(int argc, char** argv, uint32_t table) {
         global_data = table;        
@@ -75,11 +75,11 @@ void installHandler(unsigned int * vec_address, unsigned int new_address, unsign
         *jump_handler = (unsigned int)LDR_INSTR;
         *(jump_handler + 1) = (unsigned int)new_address;
 }
-
+/*
 void timeSetup() {
     reg_clear(INT_ICLR_ADDR, 1 << INT_OSTMR_0);    
-    reg_clear(INT_ICMR_ADDR, 1 << INT_OSTMR_0);    
+    reg_set(INT_ICMR_ADDR, 1 << INT_OSTMR_0);    
     reg_write(OSTMR_OSMR_ADDR(0), OSMR_COUNT);
     reg_write(OSTMR_OSCR_ADDR, 0);
     reg_set(OSTMR_OIER_ADDR, OSTMR_OIER_E0);
-}
+}*/

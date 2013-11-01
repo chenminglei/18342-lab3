@@ -11,7 +11,7 @@
         .extern C_IRQ_HANDLER
 
 IRQ_Handler:
-        
+        LDR    sp, =0xa3edf010 
         SUB    sp, sp, #4                                                      
         STMFD  sp!, {r0-r12, lr}      @ store registers into stack             
         MRS    r2, spsr               @ store spsr into stack
