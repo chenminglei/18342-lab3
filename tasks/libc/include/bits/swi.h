@@ -1,4 +1,4 @@
-/** @file swi.h
+/* @file swi.h
  *
  * @brief Defines syscall numbers used in SWI instructions
  *
