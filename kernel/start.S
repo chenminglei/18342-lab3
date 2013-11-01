@@ -30,7 +30,7 @@ FUNC(_start)
         mrs r2, cpsr            @get the value of cpsr          
         str r2, [sp, #13 * 4]   @store cpsr to the right place
 
-        orr r2, r2, #128        
+        bic r2, r2, #128        
         msr cpsr, r2
      
         ldr r2, [sp, #4]        @restore the value of r2      
