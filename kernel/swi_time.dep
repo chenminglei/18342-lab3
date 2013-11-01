@@ -1,0 +1,26 @@
+/home/chenzhuokb2/Desktop/lab3-github/kernel/swi_time.o:  \
+ /home/chenzhuokb2/Desktop/lab3-github/kernel/swi_time.c \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/arm/timer.h \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/arm/reg.h \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/inline.h \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/types.h \
+  /home/chenzhuokb2/Desktop/lab3-github/uboot/include/exports.h \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/stdarg.h \
+  /home/chenzhuokb2/Desktop/lab3-github/uboot/include/_exports.h \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/constant.h
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/arm/timer.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/arm/reg.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/inline.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/types.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/uboot/include/exports.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/stdarg.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/uboot/include/_exports.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/constant.h:

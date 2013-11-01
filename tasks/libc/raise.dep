@@ -1,0 +1,17 @@
+/home/chenzhuokb2/Desktop/lab3-github/tasks/libc/raise.o:  \
+ /home/chenzhuokb2/Desktop/lab3-github/tasks/libc/raise.c \
+  /home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/stdio.h \
+  /home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/stdarg.h \
+  /home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/sys/types.h \
+  /home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/bits/types.h \
+  /home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/stdlib.h
+
+/home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/stdio.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/stdarg.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/sys/types.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/bits/types.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/tasks/libc/include/stdlib.h:

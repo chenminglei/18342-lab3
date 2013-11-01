@@ -1,0 +1,5 @@
+/home/chenzhuokb2/Desktop/lab3-github/kernel/start.o:  \
+ /home/chenzhuokb2/Desktop/lab3-github/kernel/start.S \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/asm.h
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/asm.h:

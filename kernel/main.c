@@ -29,8 +29,11 @@ unsigned int irq_instr2; // original content of the second instruction in swi ha
 unsigned int spaddr;     // original sp address
 unsigned int cur_time = 0;
 
+char irq_stack[IRQ_STACK_SIZE];
+
+
 void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type);
-//void timeSetup();
+
 
 int kmain(int argc, char** argv, uint32_t table) {
         global_data = table;        
