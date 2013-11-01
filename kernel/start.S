@@ -29,6 +29,10 @@ FUNC(_start)
         str r2, [sp, #14 * 4]   @store spsr to the right place                  
         mrs r2, cpsr            @get the value of cpsr          
         str r2, [sp, #13 * 4]   @store cpsr to the right place
+
+        orr r2, r2, #128        
+        msr cpsr, r2
+     
         ldr r2, [sp, #4]        @restore the value of r2      
                                                               
         ldr r1, =spaddr         @get the address of var spaddr
