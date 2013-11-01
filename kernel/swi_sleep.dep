@@ -1,8 +1,0 @@
-/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/swi_sleep.o:  \
- /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/swi_sleep.c \
-  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/constant.h \
-  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/timer.h
-
-/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/constant.h:
-
-/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/arm/timer.h:
