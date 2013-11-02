@@ -9,10 +9,10 @@
         .text
         .global IRQ_Handler
         .extern C_IRQ_HANDLER
-        .extern irq_stack
+        .extern irq_stack_top
 
 IRQ_Handler:
-        LDR    sp, =irq_stack
+        LDR    sp, =irq_stack_top
         SUB    sp, sp, #4                                                      
         STMFD  sp!, {r0-r12, lr}      @ store registers into stack             
         MRS    r2, spsr               @ store spsr into stack

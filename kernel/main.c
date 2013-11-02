@@ -30,12 +30,15 @@ unsigned int spaddr;     // original sp address
 unsigned int cur_time = 0;
 
 char irq_stack[IRQ_STACK_SIZE];
+unsigned long irq_stack_top;
 
 
 void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type);
 
 
 int kmain(int argc, char** argv, uint32_t table) {
+        irq_stack_top = (unsigned long)(irq_stack + IRQ_STACK_SIZE - 1);        
+
         global_data = table;        
 
         installHandler((unsigned int *)VEC_SWI, (unsigned int)S_Handler, 0);

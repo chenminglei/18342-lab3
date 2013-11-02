@@ -13,7 +13,5 @@ int main(int argc, char** argv)
 {
         sleep(30);
         unsigned long t = time(); 
-        const char hello[] = "Hello World\r\n";
-	write(STDOUT_FILENO, hello, sizeof(hello) - 1);
 	return t;
 }
