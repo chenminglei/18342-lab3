@@ -29,11 +29,11 @@ unsigned int irq_instr2; // original content of the second instruction in swi ha
 unsigned int spaddr;     // original sp address
 unsigned int cur_time = 0;
 
-char irq_stack[IRQ_STACK_SIZE];
+unsigned int irq_stack[IRQ_STACK_SIZE];
 unsigned long irq_stack_top;
 
 
-void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type);
+//void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type);
 
 
 int kmain(int argc, char** argv, uint32_t table) {
@@ -44,6 +44,12 @@ int kmain(int argc, char** argv, uint32_t table) {
         installHandler((unsigned int *)VEC_SWI, (unsigned int)S_Handler, 0);
         installHandler((unsigned int *)VEC_IRQ, (unsigned int)IRQ_Handler, 1);
 
+        printf("before irqsetup\n");
+
+        irqSetup();
+
+        printf("after irqsetup\n");
+
         timeSetup();
 
         /* Set up user program */     
@@ -52,19 +58,19 @@ int kmain(int argc, char** argv, uint32_t table) {
 	return -255;
 }
 
-void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type) {
+/*void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type) {
 
         unsigned int vec_instr = *vec_address;
         unsigned int * jump_handler;
-
+*/
         /* Check the ldr instruction */
-        if ((vec_instr & 0xfffff000) != LDR_CHECK) {
+/*        if ((vec_instr & 0xfffff000) != LDR_CHECK) {
             printf("info : instruction in vector table incorrect!\n");
             swi_exit(vec_instr);
         }      
-
+*/
         /* Get the address of the original swi handler */
-        jump_handler = (unsigned int *)((0x00000fff & vec_instr) + (unsigned int)vec_address + 0x08);
+ /*       jump_handler = (unsigned int *)((0x00000fff & vec_instr) + (unsigned int)vec_address + 0x08);
         jump_handler = (unsigned int *)(*jump_handler); 
 
         if (type == 0) {
@@ -77,15 +83,10 @@ void installHandler(unsigned int * vec_address, unsigned int new_address, unsign
             irq_instr1 = *jump_irq;
             irq_instr2 = *(jump_irq + 1);
         }
+*/
         /* Change the original instructions */
-        *jump_handler = (unsigned int)LDR_INSTR;
+/*        *jump_handler = (unsigned int)LDR_INSTR;
         *(jump_handler + 1) = (unsigned int)new_address;
 }
-/*
-void timeSetup() {
-    reg_clear(INT_ICLR_ADDR, 1 << INT_OSTMR_0);    
-    reg_set(INT_ICMR_ADDR, 1 << INT_OSTMR_0);    
-    reg_write(OSTMR_OSMR_ADDR(0), OSMR_COUNT);
-    reg_write(OSTMR_OSCR_ADDR, 0);
-    reg_set(OSTMR_OIER_ADDR, OSTMR_OIER_E0);
-}*/
+*/
+

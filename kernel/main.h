@@ -20,8 +20,10 @@ void swi_sleep(unsigned * regs);
 
 unsigned long swi_time();
 
+void installHandler(unsigned int * vec_address, unsigned int new_address, unsigned int type);
 // user set up
 void userSetup(int argc, char *argv[]);
+void irqSetup();
 
 void timeSetup();
 

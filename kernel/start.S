@@ -30,7 +30,7 @@ FUNC(_start)
         mrs r2, cpsr            @get the value of cpsr          
         str r2, [sp, #13 * 4]   @store cpsr to the right place
 
-        bic r2, r2, #128        
+        bic r2, r2, #0x80        
         msr cpsr, r2
      
         ldr r2, [sp, #4]        @restore the value of r2      
@@ -38,7 +38,8 @@ FUNC(_start)
         ldr r1, =spaddr         @get the address of var spaddr
         str sp, [r1]            @store sp to this variable    
         ldr r1, [sp]            @changed                                 
-       
+
+
         mov r2, r8                                                       
         b       kmain            
 

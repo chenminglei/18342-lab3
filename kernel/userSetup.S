@@ -7,7 +7,7 @@
 
         .file   "userSetup.S"
         .text
-        .global userSetup
+        .global  userSetup
 
 userSetup:
         MRS  r2, cpsr            @ switch to user mode and mask IRQs and FIQs
