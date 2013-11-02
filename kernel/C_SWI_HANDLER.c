@@ -32,14 +32,14 @@ unsigned long C_SWI_HANDLER(unsigned swi_num, void* regs) {
                     /* call swi_write */
                     result = swi_write(regs);      
                     break;    
-		case TIME_SWI:
-		    /* call swi_time */
-		    result = swi_time();
-		    break;
-		case SLEEP_SWI:
-		    /*call swi_sleep */
-		    swi_sleep(regs);     
-		    break;                
+				case TIME_SWI:
+					/* call swi_time */
+					result = swi_time();
+					break;
+				case SLEEP_SWI:
+					/*call swi_sleep */
+					swi_sleep(regs);
+					break;
                 default:                           
                     /* return with status bad code */
                     swi_exit(BADCODE);                 
