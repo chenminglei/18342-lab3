@@ -17,7 +17,7 @@
 
 unsigned long C_SWI_HANDLER(unsigned swi_num, void* regs) {
         unsigned long result = 0;
-
+        printf("in C_SWI_HANDLER\n");
         /*Decide which swi to run based on swi number */
         switch(swi_num) {
                 case EXIT_SWI:

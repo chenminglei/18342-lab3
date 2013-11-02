@@ -13,12 +13,11 @@
            
                                                        
 S_Handler:                                                                     
-        
         SUB    sp, sp, #4                                                      
         STMFD  sp!, {r0-r12, lr}      @ store registers into stack             
        
         MRS    r2, cpsr
-        BIC    r2, r2, #128
+        BIC    r2, r2, #0x80
         MSR    cpsr, r2        
 
         MRS    r2, spsr               @ store spsr into stack  
@@ -27,11 +26,10 @@ S_Handler:
         LDR    r0, [lr, #-4]          @ get the swi code number
         BIC    r0, r0, #0xff000000                                 
 
-        LDR    r8, =global_data
-        LDR    r8, [r8]
+        LDR    r2, =global_data
+        LDR    r8, [r2]
 
         BL     C_SWI_HANDLER          @ jump to C swi handler      
-
 
         LDR    r2, [sp, #14*4]                                     
         MSR    spsr, r2               @ restore spsr           
@@ -39,7 +37,4 @@ S_Handler:
         LDMFD  sp!, {r1-r12, lr}      @ restore registers except r0
         ADD    sp, sp, #4                                          
         MOVS   pc, lr                 @ go back to user program    
-
-
-
 
