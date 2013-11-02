@@ -13,8 +13,14 @@
            
                                                        
 S_Handler:                                                                     
+        
         SUB    sp, sp, #4                                                      
         STMFD  sp!, {r0-r12, lr}      @ store registers into stack             
+       
+        MRS    r2, cpsr
+        BIC    r2, r2, #128
+        MSR    cpsr, r2        
+
         MRS    r2, spsr               @ store spsr into stack  
         STR    r2, [sp, #14*4]                                                 
         MOV    r1, sp                 @ make current sp as the second parameter
