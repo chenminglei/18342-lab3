@@ -12,7 +12,7 @@
 userSetup:
         MRS  r2, cpsr            @ switch to user mode and mask IRQs and FIQs
         BIC  r2, r2, #0xff       
-        ORR  r2, r2, #0xd0       
+        ORR  r2, r2, #0x50       
         MSR  cpsr, r2
 
         MOV  sp, #0xa3000000     @ set stack top at 0xa3000000

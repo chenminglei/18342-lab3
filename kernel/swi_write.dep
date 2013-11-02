@@ -1,0 +1,20 @@
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/swi_write.o:  \
+ /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/swi_write.c \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/main.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/bits/errno.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/uboot/include/exports.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/types.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/stdarg.h \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/uboot/include/_exports.h
+
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/main.h:
+
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/bits/errno.h:
+
+/home/chinalidi/Desktop/lab3code/18342-lab3/uboot/include/exports.h:
+
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/types.h:
+
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/stdarg.h:
+
+/home/chinalidi/Desktop/lab3code/18342-lab3/uboot/include/_exports.h:

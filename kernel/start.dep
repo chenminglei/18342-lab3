@@ -1,0 +1,5 @@
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/start.o:  \
+ /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/start.S \
+  /home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/asm.h
+
+/home/chinalidi/Desktop/lab3code/18342-lab3/kernel/include/asm.h:
