@@ -5,8 +5,7 @@
 
 extern volatile unsigned int cur_time;
 void C_IRQ_HANDLER() {
-        volatile unsigned long osmr = reg_read(OSTMR_OSMR_ADDR(0));
-	reg_write(OSTMR_OSMR_ADDR(0), osmr + OSMR_COUNT + 2000);
-	cur_time++;
+	cur_time ++;
+	reg_write(OSTMR_OSCR_ADDR, 0x0);
 	reg_set(OSTMR_OSSR_ADDR, OSTMR_OSSR_M0);
 }
