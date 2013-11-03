@@ -1,0 +1,20 @@
+/home/chenzhuokb2/Desktop/lab3-github/kernel/swi_read.o:  \
+ /home/chenzhuokb2/Desktop/lab3-github/kernel/swi_read.c \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/main.h \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/bits/errno.h \
+  /home/chenzhuokb2/Desktop/lab3-github/uboot/include/exports.h \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/types.h \
+  /home/chenzhuokb2/Desktop/lab3-github/kernel/include/stdarg.h \
+  /home/chenzhuokb2/Desktop/lab3-github/uboot/include/_exports.h
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/main.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/bits/errno.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/uboot/include/exports.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/types.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/kernel/include/stdarg.h:
+
+/home/chenzhuokb2/Desktop/lab3-github/uboot/include/_exports.h:
