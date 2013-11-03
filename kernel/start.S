@@ -1,13 +1,9 @@
 /**
  * @file  start.S
- *
- * @brief Kernel startup routine
- *
- * @author Mike Kasick <mkasick@andrew.cmu.edu>
- * @date   Tue, 23 Oct 2007 11:20:33 -0400
- *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date   2008-07-06
+ * Authors: Di Li <dil1@andrew.cmu.edu>                                      
+ *          Zhe Shen <zshen@andrew.cmu.edu>
+ *          Minglei Chen <mingleic@andrew.cmu.edu>                                      
+ * Date:    7:47 PM  Nov 3rd 2013  
  */
 
 #include <asm.h>
@@ -15,13 +11,6 @@
 	.file   "start.S"
 
 FUNC(_start)
-	/*
-	 * Branch immediately to main without altering the execution environment.
-	 * This indirection is needed to guarantee that the program entry point is
-	 * LOAD_ADDR (probably 0xa3000000) without placing strict
-	 * requirements on the layout of kernel.c.  Bit first, provide main with the
-	 * jump table address as one of its arguments.
-	 */
         
         sub sp, sp, #8          @leave space for spsr and cpsr                  
         stmfd sp!, {r1-r12, lr} @store r1 to r12 and lr                         
@@ -40,6 +29,6 @@ FUNC(_start)
         ldr r1, [sp]            @changed                                 
 
 
-        mov r2, r8                                                       
+        mov r2, r8              @put r8 as the third parameter of kmain func                                         
         b       kmain            
 
