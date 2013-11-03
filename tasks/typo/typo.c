@@ -7,29 +7,31 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-#define BUFFERSIZE 100
-int main(int argc, char** argv)
-{
+
+#define STDIN  0
+#define STDOUT 1
+#define BUFFERSIZE 1000
+
+int main(int argc, char** argv) {
 	/* Add code here -- put your names at the top. */
-	unsigned long start;
-	unsigned long end;
-	int i;
-	char buffer[BUFFERSIZE] = {0};
-	i = 0;
-	while(1) {
-	    printf(">");
-	    start = time();
-	    sscanf("%s", buffer);
-	    while(i < BUFFERSIZE && buffer[i] != '\0') {
-		printf("%c", buffer[i]);
-	        i ++;
-	    }
-	    end = time();
-	    printf("%.1fs\n", (double)(end - start)/1000);
-	    for(i = 0;i < BUFFERSIZE;i ++) {
-		buffer[i] = 0;
-	    }
-	    i = 0;
-	}	
+	unsigned long start = 0;
+	unsigned long end = 0;
+	char buffer[BUFFERSIZE] = { 0 };
+	int i = 0;
+	while (1) {
+		i = 0;
+		printf(">");
+		start = time();
+		read(STDIN, buffer, 1000);
+		while (i < BUFFERSIZE && buffer[i] != '\0') {
+			printf("%c", buffer[i]);
+			++i;
+		}
+		end = time();
+		printf("%d\n", (int)start);
+		printf("%d\n", (int)end);
+		printf("%d\n", (int) ((end - start) / 1000));
+	}
 	return 0;
 }
+

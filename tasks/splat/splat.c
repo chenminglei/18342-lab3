@@ -14,12 +14,16 @@ int main(int argc, char** argv)
 	while(1) {
 	    printf("|");
 	    sleep(200);
+            printf("\b");
 	    printf("/");
 	    sleep(200);
+            printf("\b");
 	    printf("-");
 	    sleep(200);
+            printf("\b");
 	    printf("\\");
 	    sleep(200);
+            printf("\b");
 	}
 	return 0;
 }
