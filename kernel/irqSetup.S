@@ -13,12 +13,12 @@
 irqSetup:
         MRS  r2, cpsr            @ switch to irq mode
    
-        MOV  r3, r2
+        MOV  r3, r2              
         BIC  r3, r3, #0x0f
         ORR  r3, r3, #0x02
         MSR  cpsr, r3
         
-        LDR  sp, =irq_stack_top
+        LDR  sp, =irq_stack_top  @ set the IRQ stack address
         LDR  sp, [sp] 
 
         

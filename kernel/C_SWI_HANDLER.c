@@ -6,11 +6,6 @@
 #include "main.h"
 #include <exports.h>
 #include <bits/swi.h>
-//#define READ 0x900003
-//#define WRITE 0x900004
-//#define EXIT 0x900001
-//#define TIME 0x900006
-//#define SLEEP 0x900007
 #define BADCODE 0xbadc0de
 
 /*Given swi_num and arguments, decide which swi handler to choose */
@@ -31,14 +26,14 @@ unsigned long C_SWI_HANDLER(unsigned swi_num, void* regs) {
                     /* call swi_write */
                     result = swi_write(regs);      
                     break;    
-				case TIME_SWI:
-					/* call swi_time */
-					result = swi_time();
-					break;
-				case SLEEP_SWI:
-					/*call swi_sleep */
-					swi_sleep(regs);
-					break;
+		case TIME_SWI:
+		    /* call swi_time */
+		    result = swi_time();
+		    break;
+		case SLEEP_SWI:
+		    /*call swi_sleep */
+		    swi_sleep(regs);
+		    break;
                 default:                           
                     /* return with status bad code */
                     swi_exit(BADCODE);                 
