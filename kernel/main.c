@@ -27,7 +27,7 @@ unsigned int irq_instr1; // original content of the first instruction in swi han
 unsigned int irq_instr2; // original content of the second instruction in swi handler
 
 unsigned int spaddr;     // original sp address
-unsigned int cur_time = 0;
+volatile unsigned int cur_time = 0;
 
 unsigned int irq_stack[IRQ_STACK_SIZE];
 unsigned long irq_stack_top;

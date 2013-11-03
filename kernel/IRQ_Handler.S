@@ -29,5 +29,5 @@ IRQ_Handler:
         LDMFD  sp!, {r0-r12, lr}      @ restore registers except r0
         ADD    sp, sp, #4                                          
         
-        SUBS   lr, lr, #4                 @ go back to user program
+        SUB    lr, lr, #4                 @ go back to user program
         MOVS   pc, lr
