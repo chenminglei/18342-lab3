@@ -12,13 +12,13 @@ int main(int argc, char** argv)
 	
 	/* Add code here -- put your names at the top. */
 	while(1) {
-	    printf("|");
+	    printf("\b|");
 	    sleep(200);
-	    printf("/");
+	    printf("\b/");
 	    sleep(200);
-	    printf("-");
+	    printf("\b-");
 	    sleep(200);
-	    printf("\\");
+	    printf("\b\\");
 	    sleep(200);
 	}
 	return 0;

@@ -6,11 +6,11 @@
 extern unsigned int cur_time;
 unsigned long swi_time() {
 
-    printf("in swi_time \n");
+   // printf("in swi_time \n");
 
     unsigned long oscr = reg_read(OSTMR_OSCR_ADDR);
-    printf("oscr : %lu", oscr);
-    unsigned long ret = cur_time*TIME_RESOLUTION + (oscr -  cur_time*OSMR_COUNT) / OSMR_ONE_SECOND;
+   // printf("oscr : %lu", oscr);
+    unsigned long ret = cur_time*TIME_RESOLUTION + oscr/3250;
     return ret;
 }
 

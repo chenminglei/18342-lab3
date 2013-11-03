@@ -21,11 +21,11 @@ S_Handler:
         MSR    cpsr, r2        
 
         MRS    r2, spsr               @ store spsr into stack  
-        STR    r2, [sp, #14*4]                                                 
+        STR    r2, [sp, #14*4]  
+	                                               
         MOV    r1, sp                 @ make current sp as the second parameter
         LDR    r0, [lr, #-4]          @ get the swi code number
         BIC    r0, r0, #0xff000000                                 
-
         LDR    r2, =global_data
         LDR    r8, [r2]
 
