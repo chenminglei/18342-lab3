@@ -7,4 +7,7 @@
 
 
 #define OSMR_COUNT  32500
+#define OSMR_ONE_SECOND 3250
+
 #define TIME_RESOLUTION 10
+
