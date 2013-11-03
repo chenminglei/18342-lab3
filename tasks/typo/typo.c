@@ -1,3 +1,12 @@
+/**
+ * typo.c: Echo the input of the user and count the input time
+ *
+ * Authors: Di Li <dil1@andrew.cmu.edu>
+ *          Zhe Shen <zshen@andrew.cmu.edu>
+ *          Minglei Chen <mingleic@andrew.cmu.edu>
+ * Date:    00:37 AM  Nov 3rd 2013
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -8,32 +17,35 @@
 #define BUFFERSIZE 30
 
 int main(int argc, char** argv) {
-        /* Add code here -- put your names at the top. */
-        unsigned long start = 0;
-        unsigned long end = 0;
-        char buffer[BUFFERSIZE] = { 0 };
-        int i = 0;
-        int num = 0;
-        while (1) {
-                i = 0;
-                printf(">");
-                start = time();
-                num = read(STDIN, buffer, BUFFERSIZE - 2);
-                end = time();
-                if (num == BUFFERSIZE - 2) {
-                        buffer[BUFFERSIZE - 2] = '\n';
-                        buffer[BUFFERSIZE - 1] = '\0';
-                        printf("\n");
-                }
-
-                while (i < BUFFERSIZE && buffer[i] != '\0') {
-                        printf("%c", buffer[i]);
-                        ++i;
-                }
-
-                int diff = end - start;
-                printf("%d.%ds\n", diff / 1000, (diff % 1000) / 100);
-                memset(buffer,0,BUFFERSIZE);
-        }
-        return 0;
+	unsigned long start = 0;
+	unsigned long end = 0;
+	char buffer[BUFFERSIZE] = { 0 };
+	int i = 0;
+	int num = 0;
+	while (1) {
+		memset(buffer, 0, BUFFERSIZE);
+		// print prompt
+		printf(">");
+		// record start time
+		start = time();
+		num = read(STDIN, buffer, BUFFERSIZE - 2);
+		// record finish time
+		end = time();
+		if (num == BUFFERSIZE - 2) {
+			// complete the buffer to make it valid for output format
+			buffer[BUFFERSIZE - 2] = '\n';
+			buffer[BUFFERSIZE - 1] = '\0';
+			printf("\n");
+		}
+		// output the input characters
+		i = 0;
+		while (i < BUFFERSIZE && buffer[i] != '\0') {
+			printf("%c", buffer[i]);
+			++i;
+		}
+		// calculate the input time user used
+		int diff = end - start;
+		printf("%d.%ds\n", diff / 1000, (diff % 1000) / 100);
+	}
+	return 0;
 }

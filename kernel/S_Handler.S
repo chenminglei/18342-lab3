@@ -16,7 +16,7 @@ S_Handler:
         SUB    sp, sp, #4                                                      
         STMFD  sp!, {r0-r12, lr}      @ store registers into stack             
        
-        MRS    r2, cpsr
+        MRS    r2, cpsr               @ enable irq
         BIC    r2, r2, #0x80
         MSR    cpsr, r2        
 

@@ -1,21 +1,18 @@
-/** @file hello.c
+/**
+ * hello.c: test sleep and time basic functions
  *
- * @brief Prints out Hello world using the syscall interface.
- *
- * Links to libc.
- *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date   2008-10-29
+ * Authors: Di Li <dil1@andrew.cmu.edu>
+ *          Zhe Shen <zshen@andrew.cmu.edu>
+ *          Minglei Chen <mingleic@andrew.cmu.edu>
+ * Date:    00:37 AM  Nov 3rd 2013
  */
+
 #include <unistd.h>
 #include <stdio.h>
-int main(int argc, char** argv)
-{
-        sleep(30);
-       // unsigned long t = time();
-	//printf("rest\n");
-	//printf("rest\n");
-//	sleep(70); 
+int main(int argc, char** argv) {
+	// sleep 30 milliseconds
+	sleep(30);
+	// get current time
 	unsigned long t = time();
 	return t;
 }

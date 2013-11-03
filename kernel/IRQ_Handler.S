@@ -3,7 +3,7 @@
 @ Author: Di Li <dil1@andrew.cmu.edu>
 @         Zhe Shen <zshen@andrew.cmu.edu>
 @         Minglei Chen <mingleic@andrew.cmu.edu>
-@ Date:   Oct 18th 2013
+@ Date:   Nov 1st 2013
 
         .file   "IRQ_Handler.S"
         .text
@@ -21,13 +21,13 @@ IRQ_Handler:
         LDR    r2, =global_data
         LDR    r8, [r2]
 	
-	MRS    r3, cpsr
+	MRS    r3, cpsr               @disable IRQ
 	ORR    r3, r3, #0x80
         MSR    cpsr, r3
 
         BL     C_IRQ_HANDLER          @ jump to C IRQ handler
 
-	MRS    r3, cpsr
+	MRS    r3, cpsr               @enable IRQ
 	BIC    r3, r3, #0x80
 	MSR    cpsr, r3
 
