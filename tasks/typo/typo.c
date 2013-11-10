@@ -28,15 +28,18 @@ int main(int argc, char** argv) {
 		printf(">");
 		// record start time
 		start = time();
-		num = read(STDIN, buffer, BUFFERSIZE - 2);
+		num = read(STDIN, buffer, BUFFERSIZE - 1);
 		// record finish time
 		end = time();
-		if (num == BUFFERSIZE - 2) {
-			// complete the buffer to make it valid for output format
-			buffer[BUFFERSIZE - 2] = '\n';
-			buffer[BUFFERSIZE - 1] = '\0';
+		// finish the input and also deal with the Ctrl+D
+		if (num == BUFFERSIZE - 1) {
+			buffer[BUFFERSIZE - 1] = '\n';
+			printf("\n");
+		} else if (buffer[num-1] != '\n'){
+			buffer[num] = '\n';
 			printf("\n");
 		}
+
 		// output the input characters
 		i = 0;
 		while (i < BUFFERSIZE && buffer[i] != '\0') {

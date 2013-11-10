@@ -1,0 +1,6 @@
+PROGS_SPLAT_OBJS := funtime.o
+PROGS_SPLAT_OBJS := $(PROGS_SPLAT_OBJS:%=$(TDIR)/funtime/%)
+ALL_OBJS += $(PROGS_SPLAT_OBJS)
+
+$(TDIR)/bin/funtime : $(TSTART) $(PROGS_SPLAT_OBJS) $(TLIBC)
+

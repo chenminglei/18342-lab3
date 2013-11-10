@@ -13,7 +13,7 @@ MAKEFLAGS += -rR
 # The packages are all phony targets.  They produce files in the bin directory.
 # Make sure there are no name clashes.  Add new ones here if you make your own
 # tests (which I recommend you do).
-PACKAGES = hello rot13 exit twister splat typo runRace
+PACKAGES = hello rot13 exit twister splat typo runRace funtime
 
 .PHONY: all package clean clobber $(PACKAGES)
 all: package kernel
